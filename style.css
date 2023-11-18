@@ -1,0 +1,49 @@
+p {
+  font-weight: bold;
+}
+
+body {
+  position: relative;
+  text-align: center;
+  background-color: rgb(223, 223, 223);
+}
+
+img {
+  position: fixed;
+  width: 50vw;
+  left: 25vw;
+  top: calc((100vh - 50vw) / 2);
+
+  animation-name: imgAnime;
+  animation-duration: 10s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  z-index: -1;
+}
+
+@keyframes imgAnime {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  40% {
+    transform: rotateZ(-15deg);
+  }
+  55% {
+    transform: rotateZ(20deg);
+  }
+  70% {
+    transform: rotateZ(-25deg);
+  }
+  90% {
+    transform: rotateZ(370deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+    transform: scale(1);
+  }
+}
